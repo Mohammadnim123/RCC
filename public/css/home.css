@@ -1,0 +1,238 @@
+.searchHome {
+    display: block;
+    line-height: 5px;
+    margin: 0% 1% -20% 1%;
+    height: 30px;
+}
+
+.sectionOneHome div:nth-child(1) form:nth-child(1) {
+    margin: auto;
+    grid-area: formOne;
+}
+
+.sectionOneHome div:nth-child(1) form:nth-child(1) input {
+    height: 50px;
+    width: 250px;
+    background-color: rgba(132, 169, 172, 0.7);
+    border: 1px solid grey;
+    border-radius: 7px;
+}
+
+.sectionOneHome div:nth-child(1) form:nth-child(2) {
+    margin: auto;
+    grid-area: formTwo;
+}
+
+.sectionOneHome div:nth-child(1) form:nth-child(2) input {
+    height: 50px;
+    width: 250px;
+    background-color: rgba(132, 169, 172, 0.7);
+    border: 1px solid grey;
+    border-radius: 7px;
+}
+
+.sectionOneHome div:nth-child(1) form:nth-child(3) {
+    margin: 0 auto;
+    grid-area: formThree;
+}
+
+.sectionOneHome div:nth-child(1) form:nth-child(3) input {
+    height: 50px;
+    width: 250px;
+    background-color: rgba(132, 169, 172, 0.7);
+    /* opacity: 0.5; */
+    border: 1px solid grey;
+    border-radius: 7px;
+}
+#heroContainer{
+    background-image: url(/img/searches.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin: 260px 0;
+    margin-bottom: 80px;
+}
+#titleContainer{
+    background-color: rgba(39, 75, 91, .65);
+}
+#heroContainer h1{
+    text-align: center;
+}
+.userInfo {
+    width: 28%;
+}
+.basicInfo{
+    margin: 0;
+}
+.basicInfo h4{
+    height: 25px;
+    margin: 8% 21.5%;
+}
+.saidBarNav{
+    margin: 25% -140.5% 0;
+    width: 95%;
+}
+#weatherList{
+    height: 395px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#weatherList li{
+    border-bottom: 2px solid rgba(157, 2, 8, .85);
+    margin: 2%;
+}
+#weatherList li h2{
+    color: #f5f5f5;
+    font-size: 20px;
+    text-align: center;
+    margin: 2% 0;
+}
+#weatherList li img{
+    margin: 0 28%;
+}
+#weatherList li p{
+    color: #f5f5f5;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+#allNews {
+    width: 110%;
+}
+.container{
+    height: 242px;
+    width: 88%;
+}
+.container:hover{
+    box-shadow: 3px 3px 6px #204051;
+}
+.contents{
+    display: flex;
+    margin: 0 2%;
+}
+.conts{
+    width: 54%;
+}
+.info a{
+    color: #204051;
+    text-decoration: none;
+}
+.info h2{
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 48% 10%;
+    width: 100%;
+}
+ .cont{
+    border: 1px solid #204051;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+    height: 241px;
+    margin-bottom: 3%;
+    width: 520px;
+}
+.contents a{
+    text-decoration: none;
+    margin: 0 2% 1%;
+}
+.contents .cont:hover{
+    margin: 2% 5%;
+    width: 500px;
+}
+.imgCover h2{
+    color: #f5f5f5;
+    font-size: 35px;
+    font-weight: bolder;
+    margin: -52% 45% 40%;
+    text-align: center;
+    width: 250px;
+}
+.info .cont:hover{
+    width: 510px;
+}
+.imgCover h2:hover{
+    font-size: 30px;
+}
+.container .news .cont{
+    width: 50%;
+    margin: -2% 2%;
+    height: 205px;
+}
+footer{
+    padding: 0;
+}
+
+.sectionTwoHome>div:first-child {
+    background-color: #e4e3e3;
+    border-right: 1px solid gray;
+    width: 24.9%;
+    height: 500px;
+    overflow-x: scroll;
+    margin: 0;
+}
+
+.sectionTwoHome>div:nth-child(2) div>img {
+    grid-area: img;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.sectionTwoHome>div:nth-child(2) div>h2 {
+    font-family: 'Dancing Script', cursive;
+font-weight: 900;
+    grid-area: h2h2h2;
+    padding-top: 5%;
+}
+
+.sectionTwoHome>div:nth-child(2) div>h2 a{
+    text-decoration: none;
+    color: gray;
+}
+
+.sectionTwoHome>div:nth-child(2) div>p {
+    grid-area: ppp;
+}
+
+.sectionTwoHome>div:nth-child(2) div {
+    width: 37%;
+    display: grid;
+    grid-template-areas: 'img h2h2h2''img ppp';
+    grid-template-columns: 200px 1fr;
+    margin: 5% 0 0 10%
+}
+
+.weatherStatus {
+    display: flex;
+}
+
+/*-------------------------------------------*/
+
+/*---------------------Weather section----------------------*/
+
+.homeDivForWeather h2 {
+    margin: 2% 0 0 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 34px;
+    text-align: center;
+}
+
+.homeDivForWeather ul {
+    margin: 5%;
+}
+
+.homeDivForWeather ul li {
+    display: inline-block;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #204051;
+    text-align: center;
+    width: 100%;
+}
+
+.homeDivForWeather ul li:nth-child(4n) {
+    border-bottom: 1px solid gray;
+    margin-bottom: 10%;
+}
+
+

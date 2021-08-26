@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politics News</title>
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div id="logo">
+                <img src="img/logo1.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index">Home</a></li>
+                    <div class="dropdown">
+                        <li class="droplist"><a>Categories</a></li>
+                        <div class="dropdown-content">
+                                <a href="/news">Politics News</a>
+                                <a href="/sport">Sport News</a>
+                                <a href="/health">Health News</a>
+                                <a href="/tech">Technology News</a>
+    
+                            </div>
+                        </div>
+                        <li><a href="/favorite">Read Later</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+            <form class="formSearch" action="/tosearch" method="post">
+                <input class="searchHome" type="text" name="search" placeholder="Search For Country News....." required>
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+            <form action="/signout" method="post" id='buttonSignOut'>
+                <input type="submit" id="signIn" value="Sign Out">
+            </form>
+        </div>
+    </header>
+    <main>
+        <div id="heroContainer">
+            <div id="titleContainer">
+                <h1 id="title">Politics News</h1>
+            </div>
+        </div>
+        <article>
+            <section class="userInfo">
+                <div class="basicInfo">
+                    <img src="<%= signin[2] %>" alt="" class="user2">
+                    <h4><%= signin[0] %> <%= signin[1] %></h4>
+                </div>
+
+                <form action="/signout" class="logoutBar" method="post">
+                    <input type="submit" id="signIn" class="logoutButton" value="Sign Out">
+                </form>
+                <div class="saidBarNav">
+                    <nav id="footerNav" class="userNav">
+                        <ul>
+                            <li><a href="/index">Home</a></li>
+                            <li><a href="/news">Politics News</a></li>
+                            <li><a href="/sport">Sport News</a></li>
+                            <li><a href="/health">Health News</a></li>
+                            <li><a href="/tech">Technology News</a></li>
+                            <li><a href="/favorite">Read Later</a></li>
+                            <li><a href="/dashboard">Dashboard</a></li>
+                            <li><a href="/about">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <section id="allNews">
+                <% newsData.forEach ((item,ind) => { %>
+                <div class="container">
+                    <div class="news">
+                        <img src="<%= item.urlToImage %>" alt="">
+                        <div class="info">
+                            <h3><%= item.title %></h3>
+                            <p class="date"><%= item.publishedAt %></p>
+                            <h4><%= item.author %></h4>
+                            <p class="desc"><%= item.content %></p>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="readMore"><a href="<%=item.url%>">Read More</a></button>
+
+                        <form action="/addfavorite" method="post" class="form">
+                            <input class="hidden" type="text" id="category" name="category" value="Politics News"><br>
+                            <input class="hidden" type="text" id="urlToImage" name="urlToImage"
+                                value="<%= item.urlToImage %>"><br>
+                            <input class="hidden" type="text" id="author" name="author" value="<%= item.author %>"><br>
+                            <input class="hidden" type="text" id="title" name="title" value="<%= item.title %>"><br>
+                            <input class="hidden" type="text" id="url" name="url" value="<%= item.url %>"><br>
+                            <input class="hidden" type="text" id="publishedAt" name="publishedAt"
+                                value="<%= item.publishedAt %>"><br>
+                            <input class="hidden" type="text" id="content" name="content"
+                                value="<%= item.content %>"><br>
+
+                            <button class="readMore">Read Later</button>
+                        </form>
+
+                        <form action="/share" class="form" method="post" style="margin-left: 25%;">
+                            <input class="hidden" style="display: none;" type="text" id="category" name="category"
+                                value="Sport News"><br>
+                            <input class="hidden" style="display: none;" type="text" id="urlToImage" name="urlToImage"
+                                value="<%= item.urlToImage %>"><br>
+                            <input class="hidden" style="display: none;" type="text" id="author" name="author"
+                                value="<%= item.author %>"><br>
+                            <input class="hidden" style="display: none;" type="text" id="title" name="title"
+                                value="<%= item.title %>"><br>
+                            <input class="hidden" style="display: none;" type="text" id="url" name="url"
+                                value="<%= item.url %>"><br>
+                            <input class="hidden" style="display: none;" type="text" id="publishedAt" name="publishedAt"
+                                value="<%= item.publishedAt %>"><br>
+                            <input class="hidden" style="display: none;" type="text" id="content" name="content"
+                                value="<%= item.content %>"><br>
+
+                            <button class="readMore">Share</button>
+                        </form>
+                    </div>
+                    <div class="commentBox">
+                        <!-- <label for="example">Add a comment</label> -->
+                        <div class="newComments">
+                            <img src="img/user.JPG" alt="" class="user1">
+
+                            <form  class="addCommentnews" >
+                                <input type="text" id="titleSend" name="title" value="<%= item.title %>"
+                                    style="display: none;">
+                                <input id="comment" class="commentPlace" placeholder="Add your comment..."
+                                    type="text" name="Ntext" size="20">
+                                <input type="submit" class="commentsButton" name="<%= ind%>" value="Comment">
+                            </form>
+
+                        </div>
+
+                        <ul class="comments" id="<%= ind%>W">
+
+                            <% results.forEach (item2 => { %>
+
+                            <% if(item2.title == item.title){ %>
+                            <li class="user">
+                                <img src="<%=item2.userimg%>" alt="">
+                                <div class="userComment">
+                                    <h3><%=item2.first_name%> <%=item2.last_name%></h3>
+                                    <p><%= item2.comment; %></p>
+                                </div>
+                            </li>
+                            <% }}); %>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <% }); %>
+            </section>
+        </article>
+
+
+
+    </main>
+    <footer>
+        <div id="footer">
+            <nav id="footerNav">
+                <ul>
+                    <li><a href="/politics">Politics News</a></li>
+                    <li><a href="/sport">Sport News</a></li>
+                    <li><a href="/health">Health News</a></li>
+                    <li><a href="/tech">Technology News</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </nav>
+            <nav id="logo1">
+                <img src="img/logo1.png" alt="">
+                <ul>
+                    <li class="contact">
+                        <img src="img/phone.png">
+                        <p>+9627770004567</p>
+                    </li>
+                    <li class="contact">
+                        <img src="img/email.png">
+                        <p>rcc2020@info.com</p>
+                    </li>
+                </ul>
+            </nav>
+            <div id='footerIcons'>
+                <a href="https://web.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://web.twitter.com/" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://web.youtube.com/" target="_blank" class="fa fa-youtube"></a>
+                <a href="https://web.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+                <a href="https://web.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
+
+            </div>
+        </div>
+        <div id="copy">
+            <hr>
+            <p>RCC News &copy; 2020 &middot; All Copyrights are reserved</p>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

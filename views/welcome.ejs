@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCC-Log In or Sign Up</title>
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/welcomeStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div id="logo">
+                <img src="img/logo1.png" alt="">
+            </div>
+            <p> <%= user %> </p>
+            <form action="/signingin" method="post" class="signin">
+
+                <input id="comment" type="text" name="user_name" size="20" placeholder="User Name" class="login">
+
+
+                <input id="comment" type="password" name="password" size="20" placeholder="Password" class="login">
+                <input type="submit" value="Sign In" class="loginButt">
+            </form>
+
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="cover">
+                <aside>
+                    <h1>RCC</h1>
+                    <p>Welcome to RCC!! The first social-news website. You can read articles, comment on them and even share them with other users.</p>
+                    <p>Too easy to be an RCC member .. Just sign up and join us</p>
+                </aside>
+                <div class="signUp">
+                    <h2>Sign Up</h2>
+                    <form action="/signingup" method="post" class="signingup">
+                        <div id="name">
+                            <input id="comment" class="name" type="text" name="first_name" size="20"
+                                placeholder="First Name" required>
+                            <input id="comment" class="name" type="text" name="last_name" size="20"
+                                placeholder="Last Name" required>
+                        </div>
+                        <input id="comment" class="iformation" type="email" name="email" size="20" placeholder="Email" required>
+                        <input id="comment" class="iformation" type="text" name="user_name" size="20" placeholder="Username" required>
+                        <p> <%= name %> </p>
+                        <input id="comment" class="iformation" type="password" name="password" size="20" placeholder="Password" required style="margin-bottom: 2%;">
+                        <label class="label">
+                            <input type="radio" name="gender" value="Male" required>
+                            <span class="select">Male</span>
+                        </label>
+                        <label class="label">
+                            <input type="radio" name="gender" value="Female" required>
+                            <span class="select">Female</span>
+                        </label>
+                        <input type="submit" class="submitInfo" value="Sign UP">
+                    </form>
+                </div>
+            </div>
+            <!-- <h2>Welcome To <strong>RCC NEWS</strong></h2> -->
+
+            <!-- <form action="/signingin"  method="post">
+                
+                <input id="comment" type="text" name="user_name" size="20" placeholder="User Name">
+    
+                
+                <input id="comment" type="text" name="password" size="20" placeholder="Password"> 
+                <p>  <%= user %> </p>
+                <input type="submit"  value="Sign In">
+            </form> -->
+
+
+            <!-- <form action="/signingup" method="post" class="signingup">
+
+
+                <p> <%= name %> </p>
+                <input id="comment" type="text" name="user_name" size="20" placeholder="User Name">
+
+
+                <input id="comment" type="text" name="password" size="20" placeholder="Password">
+                <label class="label">
+                    <input type="radio" name="gender" value="Male">
+                    <span>Male</span>
+                </label>
+
+                <label class="label">
+                    <input type="radio" name="gender" value="Female">
+                    <span>Female</span>
+                </label>
+
+                <input type="submit" value="Sign UP">
+            </form> -->
+
+        </section>
+
+    </main>
+    <footer id="foot">
+        <div id="footer">
+            <img src="img/logo1.png" alt="">
+            <div id="copy">
+                <p>RCC News &copy; 2020 &middot; All Copyrights are reserved</p>
+            </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

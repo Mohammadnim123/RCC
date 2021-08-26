@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCC News</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div id="header">
+            <div id="logo">
+                <img src="img/logo1.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index">Home</a></li>
+                    <div class="dropdown">
+                        <li class="droplist"><a>Categories</a></li>
+                        <div class="dropdown-content">
+                            <a href="/news">Politics News</a>
+                            <a href="/sport">Sport News</a>
+                            <a href="/health">Health News</a>
+                            <a href="/tech">Technology News</a>
+
+                        </div>
+                    </div>
+                    <li><a href="/favorite">Read Later</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </nav>
+            <form class="formSearch" action="/tosearch" method="post">
+                <input class="searchHome" type="text" name="search" placeholder="Search For Country News....." required>
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+            <form action="/signout" method="post" id='buttonSignOut'>
+                <input type="submit" id="signIn" value="Sign Out">
+            </form>
+        </div>
+    </header>
+    <main>
+        <div id="heroContainer">
+            <div id="titleContainer">
+                <h1 id="title">RCC News</h1>
+            </div>
+        </div>
+        <article>
+            <section class="userInfo">
+                <div class="basicInfo">
+                    <h4>Amman,Jordan</h4>
+                    <div class="saidBarNav">
+                        <nav class="userNav" id="weatherNav">
+                            <ul id="weatherList">
+                                <% outpot.forEach(element =>{ %>
+                                <li>
+                                    <h2><%= element.time %></h2>
+                                    <img src="<%= element.icon %>" alt="">
+                                    <p><%= element.hTemp %></p>
+                                    <p><%= element.description %></p>
+                                </li>
+                                <% }) %>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div>
+            </section>
+            <section id="allNews">
+                <div class="contents">
+                    <a href="/news">
+                        <div class="conts">
+                            <img src="/img/home1.JPG" class="cont">
+                            <div class="imgCover">
+                                <h2>Politics News</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/sport">
+                        <div class="conts">
+                            <img src="/img/home2.JPG" class="cont">
+                            <div class="imgCover">
+                                <h2>Sport News</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="contents">
+                    <a href="/health">
+                        <div class="conts">
+                            <img src="/img/home3.JPG" class="cont">
+                            <div class="imgCover">
+                                <h2>Health News</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/tech">
+                        <div class="conts">
+                            <img src="/img/home4.JPG" class="cont">
+                            <div class="imgCover">
+                                <h2 style="width: 300px;">Technology News</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        </article>
+    </main>
+    <footer>
+        <div id="footer">
+            <nav id="footerNav">
+                <ul>
+                    <li><a href="/news">Politics News</a></li>
+                    <li><a href="/sport">Sport News</a></li>
+                    <li><a href="/health">Health News</a></li>
+                    <li><a href="/tech">Technology News</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </nav>
+            <nav id="logo1">
+                <img src="img/logo1.png" alt="">
+                <ul>
+                    <li class="contact">
+                        <img src="img/phone.png">
+                        <p>+9627770004567</p>
+                    </li>
+                    <li class="contact">
+                        <img src="img/email.png">
+                        <p>rcc2020@info.com</p>
+                    </li>
+                </ul>
+            </nav>
+            <div id='footerIcons'>
+                <a href="https://web.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://web.twitter.com/" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://web.youtube.com/" target="_blank" class="fa fa-youtube"></a>
+                <a href="https://web.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+                <a href="https://web.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
+
+            </div>
+        </div>
+        <div id="copy">
+            <hr>
+            <p>RCC News &copy; 2020 &middot; All Copyrights are reserved</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

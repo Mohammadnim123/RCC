@@ -1,0 +1,21 @@
+.saidBarNav {
+    background-color: #72999F;
+    border: none;
+    border-radius: 5px;
+    width: 86%;
+    margin: 0 5%;}
+
+
+    .userInfo {
+        width: 82%;
+        height: 500px;
+        border: 1px solid #204051;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px #204051;
+        background-color: #204051;
+        margin: 2%;
+        position: sticky;
+        top: 2%;
+    }
+
+    

@@ -1,0 +1,50 @@
+#heroContainer{
+    background-image: url(/img/searches.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin: 260px 0;
+    margin-bottom: 80px;
+}
+.userInfo {
+    width: 52%;
+    height: 500px;
+    border: 1px solid #204051;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+    background-color: #204051;
+    margin: 2%;
+    position: sticky;
+    top: 2%;
+}
+.container {
+    background-color: #ffffff;
+    border: 1px solid #204051;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+    width: 90%;
+    margin: 0 0 3% 7%;
+}
+.container .news {
+    display: flex;
+    height: 356px;
+}
+.container .news img {
+    height: 236px;
+    width: 40%;
+    border: 1px solid #204051;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+    margin: 30px 15px;
+}
+.buttons {
+    width: 50%;
+    margin: -12.8% 0.25% 66px 46%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#shareButton {
+    margin-left: 194%;
+}

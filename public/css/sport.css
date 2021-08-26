@@ -1,0 +1,19 @@
+#heroContainer{
+    background-image: url(/img/sport.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin: 260px 0;
+    margin-bottom: 80px;
+}
+.userInfos {
+    width: 65%;
+    height: 500px;
+    border: 1px solid #204051;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #204051;
+    background-color: #204051;
+    margin: 2%;
+    position: sticky;
+    top: 2%;
+}

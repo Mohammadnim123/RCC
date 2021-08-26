@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="css/news.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/about.css">
+
+</head>
+
+<body>
+  <header>
+    <div id="header">
+      <div id="logo">
+          <img src="img/logo1.png" alt="">
+      </div>
+      <nav>
+          <ul>
+              <li><a href="/index">Home</a></li>
+              <div class="dropdown">
+                  <li class="droplist"><a>Categories</a></li>
+                  <div class="dropdown-content">
+                          <a href="/news">Politics News</a>
+                          <a href="/sport">Sport News</a>
+                          <a href="/health">Health News</a>
+                          <a href="/tech">Technology News</a>
+
+                      </div>
+                  </div>
+                  <li><a href="/favorite">Read Later</a></li>
+                  <li><a href="/dashboard">Dashboard</a></li>
+                  <li><a href="/about">About</a></li>
+          </ul>
+      </nav>
+      <form class="formSearch" action="/tosearch" method="post">
+          <input class="searchHome" type="text" name="search" placeholder="Search For Country News....." required>
+          <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
+      <form action="/signout" method="post" id='buttonSignOut'>
+          <input type="submit" id="signIn" value="Sign Out">
+      </form>
+  </div>
+  </header>
+  <main>
+    <section class="mainSection">
+
+
+      <div>
+        <!-- <h1>RCC NEWS WEBSITE</h1> -->
+        <h3><strong>2b|!2b Team Members</strong></h3>
+      </div>
+
+
+      <section class="aboutImg">
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/img/dana.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Dana Abaddi</h1>
+              <p>Full stack developer & Com Engineer</p>
+              <p>Gradutaed from : Princess Somaih University</p>
+              <a href="https://www.linkedin.com/in/dana-al-abbade"><i class="fa fa-linkedin fa-4x" aria-hidden="true"></i></a>
+              <a href="https://github.com/DanaAbbadi"><i class="fa fa-github fa-4x" aria-hidden="true" ></i></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/img/basma.png" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Basma Mohammed-Eid</h1>
+              <p>Full stack developer & IT</p>
+              <p>Studied at : Saudi Electronic University</p>
+              <a href="https://www.linkedin.com/in/basma-mohammed-472aa3133/"><i class="fa fa-linkedin fa-4x"
+                  aria-hidden="true"></i></a>
+              <a href="https://github.com/Basma23"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/img/nimrawi.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Moh Nemrawi</h1>
+              <p>Full stack developer & Mechanical Engineer</p>
+              <p>Gradutaed from : JUST</p>
+
+
+              <a href="https://www.linkedin.com/in/mohammad-anwer-al-nemrawi-138956197/"><i class="fa fa-linkedin fa-4x" aria-hidden="true"></i></a>
+              <a href="https://github.com/Mohammadnim123"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/img/ghafri2.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Moh Ghafri</h1>
+              <p>Full stack developer & Electrical Engineer</p>
+              <p>Gradutaed from : Hashemite University HU</p>
+
+
+              <a href="https://www.linkedin.com/in/mohammadghafri/"><i class="fa fa-linkedin fa-4x" aria-hidden="true"></i></a>
+              <a href="https://github.com/MohammedGhafri"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+
+
+  </main>
+  <footer>
+        <div id="footer">
+            <nav id="footerNav">
+                <ul>
+                    <li><a href="/politics">Politics News</a></li>
+                    <li><a href="/sport">Sport News</a></li>
+                    <li><a href="/health">Health News</a></li>
+                    <li><a href="/tech">Technology News</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </nav>
+            <nav id="logo1">
+                <img src="img/logo1.png" alt="">
+                <ul>
+                    <li class="contact">
+                        <img src="img/phone.png">
+                        <p>+9627770004567</p>
+                    </li>
+                    <li class="contact">
+                        <img src="img/email.png">
+                        <p>rcc2020@info.com</p>
+                    </li>
+                </ul>
+            </nav>
+            <div id='footerIcons'>
+                <a href="https://web.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://web.twitter.com/" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://web.youtube.com/" target="_blank" class="fa fa-youtube"></a>
+                <a href="https://web.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+                <a href="https://web.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
+
+            </div>
+        </div>
+        <div id="copy">
+            <hr>
+            <p>RCC News &copy; 2020 &middot; All Copyrights are reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
